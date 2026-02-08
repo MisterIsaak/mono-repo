@@ -1,0 +1,19 @@
+{
+  "name": "mono-repo",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "pnpm --filter demo dev",
+    "build": "pnpm --filter @misterisaak/ui build",
+    "build:all": "pnpm --filter @misterisaak/ui build && pnpm --filter demo build",
+    "typecheck": "pnpm -r run typecheck",
+    "test": "vitest",
+    "clean": "pnpm -r exec rm -rf dist node_modules .turbo"
+  },
+  "devDependencies": {
+    "typescript": "catalog:",
+    "vitest": "catalog:",
+    "happy-dom": "catalog:"
+  }
+}

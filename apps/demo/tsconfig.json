@@ -1,0 +1,17 @@
+{
+  "extends": "../../tsconfig.json",
+  "compilerOptions": {
+    "jsx": "preserve",
+    "baseUrl": ".",
+    "paths": {
+      "@misterisaak/ui": ["../../packages/ui/src"],
+      "@misterisaak/ui/*": ["../../packages/ui/src/*"]
+    }
+  },
+  "include": ["src/**/*"],
+  "references": [
+    {
+      "path": "../../packages/ui"
+    }
+  ]
+}
